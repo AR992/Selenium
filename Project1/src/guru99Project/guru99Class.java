@@ -48,5 +48,10 @@ public class guru99Class {
 		driver.findElement(By.name("password")).sendKeys("thisisnewpassword1");
 		driver.findElement(By.name("sub")).click();
 	}
+	
+	public String getCustomerId() {
+		
+		return driver.findElement(By.xpath("//table[@id='customer']/tbody/tr[4]/td[2]")).getText();
+	}
 
 }
