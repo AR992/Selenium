@@ -1,5 +1,7 @@
 package assigment1;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class task1 {
@@ -15,6 +17,8 @@ public class task1 {
 		driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(QAHub);
 	}
 	
